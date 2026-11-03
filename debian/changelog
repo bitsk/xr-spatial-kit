@@ -1,0 +1,5 @@
+xr-spatial-kit (0.1.0) unstable; urgency=medium
+
+  * Add spatial widget models, interaction state and UKUI style tokens.
+
+ -- openKylin XR SIG <xr@lists.openkylin.top>  Tue, 03 Nov 2026 23:38:49 +0800

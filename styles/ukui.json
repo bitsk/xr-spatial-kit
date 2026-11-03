@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "ukui.spatial.light",
+  "font_families": ["Noto Sans CJK SC", "WenQuanYi Micro Hei", "sans-serif"],
+  "font_size": 24,
+  "corner_radius": 16,
+  "border_width": 1.5,
+  "colours": {
+    "glass": [0.88, 0.94, 1.0, 0.84],
+    "card": [0.96, 0.98, 1.0, 0.90],
+    "foreground": [0.10, 0.16, 0.25, 1.0],
+    "muted": [0.34, 0.41, 0.51, 1.0],
+    "accent": [0.216, 0.565, 0.980, 1.0],
+    "border": [0.95, 0.98, 1.0, 0.70],
+    "hover": [0.78, 0.88, 1.0, 0.94],
+    "pressed": [0.61, 0.78, 1.0, 0.97],
+    "danger": [0.79, 0.19, 0.22, 1.0]
+  },
+  "styles": {
+    "dock.background": "glass",
+    "dock.application": "card",
+    "dock.active": "accent",
+    "panel.background": "glass",
+    "panel.card": "card",
+    "text.primary": "foreground",
+    "text.secondary": "muted",
+    "button.primary": "accent",
+    "button.secondary": "card",
+    "button.danger": "danger",
+    "slider.primary": "accent"
+  }
+}

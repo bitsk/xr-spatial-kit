@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: xr-spatial-kit
+
+Files: *
+Copyright: See original contributor and file notices
+License: GPL-3.0-or-later
+ On Debian systems, see /usr/share/common-licenses/GPL-3.

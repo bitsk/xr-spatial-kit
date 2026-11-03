@@ -1,0 +1,20 @@
+Source: xr-spatial-kit
+Section: rust
+Priority: optional
+Maintainer: openKylin XR SIG <xr@lists.openkylin.top>
+Build-Depends: debhelper-compat (= 13), cargo (>= 1.88), rustc (>= 1.88)
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: librust-xr-spatial-kit-dev
+Architecture: all
+Depends: ${misc:Depends}
+Description: Rust UKUI spatial component models and development sources
+ Local widget and interaction models for Shell scene clients.
+ This package starts no runtime or services.
+
+Package: xr-spatial-style-ukui
+Architecture: all
+Depends: ${misc:Depends}
+Description: UKUI spatial style tokens
+ Colours, geometry and font fallback preferences for XR Shell rendering.

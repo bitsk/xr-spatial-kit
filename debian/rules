@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+export RUSTFLAGS := $(RUSTFLAGS) --remap-path-prefix=$(CURDIR)=/usr/src/xr-spatial-kit
+ifneq ($(strip $(CARGO_HOME)),)
+export RUSTFLAGS += --remap-path-prefix=$(CARGO_HOME)=/usr/src/cargo
+endif
+%:
+	dh $@ --buildsystem=none
+override_dh_auto_build:
+	CARGO_TARGET_DIR="$(CURDIR)/target" cargo build --offline --locked --release
+override_dh_auto_test:
+	@echo "Control and rendering acceptance is performed against the real Shell."
+override_dh_auto_clean:
+	CARGO_TARGET_DIR="$(CURDIR)/target" cargo clean
