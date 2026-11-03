@@ -59,12 +59,13 @@ impl Theme {
             .and_then(|k| self.colours.get(k))
             .copied()
             .or_else(|| self.colours.get(style).copied())
-            .unwrap_or([0.96, 0.98, 1.0, 0.9])
+            .unwrap_or([22.0 / 255.0, 26.0 / 255.0, 35.0 / 255.0, 0.78])
     }
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, PartialEq, Eq)]
 pub enum Kind {
+    Group,
     Card,
     Text,
     Icon,
@@ -89,6 +90,11 @@ pub struct Widget {
     pub min: f32,
     pub max: f32,
     pub surface: Option<(String, String)>,
+    pub spatial_panel: bool,
+    pub logical_size: [f32; 2],
+    pub size_m: [f32; 2],
+    pub position_m: [f32; 3],
+    pub rotation_degrees: [f32; 3],
 }
 impl Widget {
     fn new(id: &str, kind: Kind, rect: [f32; 4], style: &str) -> Self {
@@ -106,10 +112,39 @@ impl Widget {
             min: 0.0,
             max: 1.0,
             surface: None,
+            spatial_panel: false,
+            logical_size: [0.0; 2],
+            size_m: [0.0; 2],
+            position_m: [0.0; 3],
+            rotation_degrees: [0.0; 3],
         }
     }
     pub fn card(id: &str, rect: [f32; 4], style: &str) -> Self {
         Self::new(id, Kind::Card, rect, style)
+    }
+    /// An independent world-space panel; children use its local logical pixels.
+    /// Positive pitch tilts the panel upward in the Shell UI convention.
+    pub fn spatial_group(
+        id: &str,
+        logical_size: [f32; 2],
+        size_m: [f32; 2],
+        position_m: [f32; 3],
+    ) -> Self {
+        let mut w = Self::new(
+            id,
+            Kind::Group,
+            [0.0, 0.0, logical_size[0], logical_size[1]],
+            "",
+        );
+        w.spatial_panel = true;
+        w.logical_size = logical_size;
+        w.size_m = size_m;
+        w.position_m = position_m;
+        w
+    }
+    pub fn with_rotation(mut self, rotation_degrees: [f32; 3]) -> Self {
+        self.rotation_degrees = rotation_degrees;
+        self
     }
     pub fn text(id: &str, rect: [f32; 4], text: &str, style: &str) -> Self {
         let mut w = Self::new(id, Kind::Text, rect, style);
@@ -181,6 +216,13 @@ impl Widget {
             node["window_server_generation"] = generation.clone().into();
             node["surface_id"] = surface.clone().into();
         }
+        if self.spatial_panel {
+            node["spatial_panel"] = true.into();
+            node["logical_size"] = json!(self.logical_size);
+            node["size_m"] = json!(self.size_m);
+            node["position_m"] = json!(self.position_m);
+            node["rotation_degrees"] = json!(self.rotation_degrees);
+        }
         node
     }
 }
@@ -190,6 +232,7 @@ pub struct Scene {
     pub logical_size: [f32; 2],
     pub size_m: [f32; 2],
     pub position_m: [f32; 3],
+    pub rotation_degrees: [f32; 3],
     pub policy: String,
     pub widgets: Vec<Widget>,
 }
@@ -204,6 +247,7 @@ impl Scene {
             logical_size,
             size_m,
             position_m,
+            rotation_degrees: [0.0; 3],
             policy: policy.into(),
             widgets: Vec::new(),
         }
@@ -211,9 +255,14 @@ impl Scene {
     pub fn push(&mut self, widget: Widget) {
         self.widgets.push(widget);
     }
+    pub fn with_rotation(mut self, rotation_degrees: [f32; 3]) -> Self {
+        self.rotation_degrees = rotation_degrees;
+        self
+    }
     pub fn operations(&self) -> Vec<Value> {
         let mut result = vec![json!({"op":"set_root_policy", "policy":self.policy,
-            "logical_size":self.logical_size, "size_m":self.size_m, "position_m":self.position_m})];
+            "logical_size":self.logical_size, "size_m":self.size_m, "position_m":self.position_m,
+            "rotation_degrees":self.rotation_degrees})];
         result.extend(self.widgets.iter().map(Widget::upsert));
         result
     }

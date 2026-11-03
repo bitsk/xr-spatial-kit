@@ -1,3 +1,10 @@
+xr-spatial-kit (0.2.0) unstable; urgency=medium
+
+  * Add independent spatial groups and explicit panel rotation.
+  * Use dark translucent glass and shared legible UKUI XR control tokens.
+
+ -- bits <bigbits@hackx.cc>  Wed, 04 Nov 2026 00:42:55 +0800
+
 xr-spatial-kit (0.1.0) unstable; urgency=medium
 
   * Add spatial widget models, interaction state and UKUI style tokens.

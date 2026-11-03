@@ -1,32 +1,101 @@
 {
   "schema": 1,
-  "id": "ukui.spatial.light",
-  "font_families": ["Noto Sans CJK SC", "WenQuanYi Micro Hei", "sans-serif"],
-  "font_size": 24,
-  "corner_radius": 16,
-  "border_width": 1.5,
+  "id": "ukui.spatial.dark",
+  "font_families": [
+    "Noto Sans CJK SC",
+    "WenQuanYi Micro Hei",
+    "sans-serif"
+  ],
+  "font_size": 20,
+  "corner_radius": 24,
+  "border_width": 1,
   "colours": {
-    "glass": [0.88, 0.94, 1.0, 0.84],
-    "card": [0.96, 0.98, 1.0, 0.90],
-    "foreground": [0.10, 0.16, 0.25, 1.0],
-    "muted": [0.34, 0.41, 0.51, 1.0],
-    "accent": [0.216, 0.565, 0.980, 1.0],
-    "border": [0.95, 0.98, 1.0, 0.70],
-    "hover": [0.78, 0.88, 1.0, 0.94],
-    "pressed": [0.61, 0.78, 1.0, 0.97],
-    "danger": [0.79, 0.19, 0.22, 1.0]
+    "glass": [
+      0.08627450980392157,
+      0.10196078431372549,
+      0.13725490196078433,
+      0.78
+    ],
+    "card": [
+      1,
+      1,
+      1,
+      0.12
+    ],
+    "key": [
+      1,
+      1,
+      1,
+      0.15
+    ],
+    "foreground": [
+      0.9490196078431372,
+      0.9647058823529412,
+      0.9882352941176471,
+      1
+    ],
+    "muted": [
+      0.5803921568627451,
+      0.6392156862745098,
+      0.7215686274509804,
+      0.85
+    ],
+    "accent": [
+      0.21568627450980393,
+      0.5647058823529412,
+      0.9803921568627451,
+      1
+    ],
+    "border": [
+      1,
+      1,
+      1,
+      0.22
+    ],
+    "button_border": [
+      1,
+      1,
+      1,
+      0.18
+    ],
+    "hover": [
+      1,
+      1,
+      1,
+      0.24
+    ],
+    "pressed": [
+      0.21568627450980393,
+      0.5647058823529412,
+      0.9803921568627451,
+      0.75
+    ],
+    "danger": [
+      0.9607843137254902,
+      0.39215686274509803,
+      0.43137254901960786,
+      1
+    ]
   },
   "styles": {
     "dock.background": "glass",
     "dock.application": "card",
+    "dock.task": "card",
     "dock.active": "accent",
+    "dock.system": "card",
+    "dock.workspace": "card",
     "panel.background": "glass",
     "panel.card": "card",
     "text.primary": "foreground",
     "text.secondary": "muted",
     "button.primary": "accent",
     "button.secondary": "card",
+    "button.icon": "card",
+    "button.hover": "hover",
     "button.danger": "danger",
-    "slider.primary": "accent"
+    "keyboard.key": "key",
+    "slider.primary": "accent",
+    "rim.panel": "border",
+    "rim.button": "button_border"
   }
 }
