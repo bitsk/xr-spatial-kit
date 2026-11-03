@@ -1,3 +1,9 @@
+xr-spatial-kit (0.2.2) unstable; urgency=medium
+
+  * Share three-island taskbar geometry and transparent application icon styles.
+
+ -- bits <bigbits@hackx.cc>  Wed, 04 Nov 2026 03:51:23 +0800
+
 xr-spatial-kit (0.2.1) unstable; urgency=medium
 
   * Refine cool-blue glass, translucent controls and keyboard rim tokens.

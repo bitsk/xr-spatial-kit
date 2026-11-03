@@ -6,6 +6,10 @@ use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
 use std::{collections::BTreeMap, path::Path};
 
+/// Shared geometry for the information, application and system-status islands.
+/// The Dock and System UI consume this contract without owning each other's state.
+pub mod taskbar;
+
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Theme {
     pub schema: u32,

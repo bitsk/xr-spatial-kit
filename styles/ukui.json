@@ -81,6 +81,36 @@
       1,
       1,
       0.25
+    ],
+    "transparent": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "app_focus": [
+      0.21568627450980393,
+      0.5647058823529412,
+      0.9803921568627451,
+      0.22
+    ],
+    "running": [
+      0.21568627450980393,
+      0.5647058823529412,
+      0.9803921568627451,
+      1
+    ],
+    "separator": [
+      1,
+      1,
+      1,
+      0.18
+    ],
+    "workspace_dot": [
+      1,
+      1,
+      1,
+      0.35
     ]
   },
   "styles": {
@@ -103,7 +133,16 @@
     "slider.primary": "accent",
     "rim.panel": "border",
     "rim.button": "button_border",
-    "rim.keyboard": "key_border"
+    "rim.keyboard": "key_border",
+    "dock.app-icon": "transparent",
+    "dock.active-icon": "app_focus",
+    "dock.status-icon": "transparent",
+    "taskbar.clock": "foreground",
+    "taskbar.caption": "muted",
+    "taskbar.status": "foreground",
+    "taskbar.separator": "separator",
+    "taskbar.running": "running",
+    "taskbar.workspace": "workspace_dot"
   },
   "corner_radii": {
     "panel": 20,
