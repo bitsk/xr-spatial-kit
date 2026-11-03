@@ -1,0 +1,89 @@
+{
+  "method": "Median display sRGB of manually selected empty capsule pixels; image analysis only, not calibrated colorimetry or a same-lighting runtime acceptance. Nominal labelled HEX values remain authoritative; illustrated swatches include gradients.",
+  "target_palette_srgb": {
+    "accent": "#3790FA",
+    "mist_silver": "#E8F0F8",
+    "content": "#F5F7FA",
+    "ink": "#233047",
+    "folder": "#FFC735"
+  },
+  "samples": [
+    {
+      "image": "style-reference.png",
+      "role": "authoritative concept, empty information-island face",
+      "box_xyxy": [
+        150,
+        763,
+        180,
+        770
+      ],
+      "median_srgb": [
+        216.0,
+        231.0,
+        252.0
+      ]
+    },
+    {
+      "image": "optical-glass-left.png",
+      "role": "previous native runtime, empty Dock face",
+      "box_xyxy": [
+        1140,
+        1540,
+        1180,
+        1553
+      ],
+      "median_srgb": [
+        86.0,
+        98.0,
+        128.0
+      ]
+    },
+    {
+      "image": "control-library.png",
+      "role": "new art reference, empty application-island face",
+      "box_xyxy": [
+        880,
+        863,
+        900,
+        871
+      ],
+      "median_srgb": [
+        219.0,
+        233.0,
+        252.0
+      ]
+    }
+  ],
+  "old_runtime_minus_style_rgb": [
+    -130.0,
+    -133.0,
+    -124.0
+  ],
+  "new_reference_minus_style_rgb": [
+    3.0,
+    2.0,
+    0.0
+  ],
+  "previous_shader_nominal": {
+    "glass_rgb": [
+      18,
+      24,
+      38
+    ],
+    "glass_alpha": 0.72,
+    "foreground_rgb": [
+      242,
+      246,
+      252
+    ]
+  },
+  "decision": "Use the supplied LIGHT Qingkong theme: mist-silver glass and ink-blue text. The prior dark material is not acceptance for this style. Do not invert the whole theme to solve light-background contrast.",
+  "future_render_checks": [
+    "Use a consistent sRGB/linear conversion, avoid double gamma conversion, and compare lossless GPU captures at a fixed camera/background.",
+    "Keep warm-white content and ink-blue glyphs independent of glass transmission; preserve rounded content clipping.",
+    "Use separate panel, rim, highlight and shadow layers; do not bake sky, text or telemetry into stretchable material textures.",
+    "Three separate capsules with air gaps; compare full-row proportions and icon silhouettes to the visual board.",
+    "Check button normal/hover/pressed/selected and icon alpha at native resolution before promoting artwork into runtime."
+  ],
+  "new_runtime_verified": false
+}

@@ -1,5 +1,10 @@
 # xr-spatial-kit
 
+晴空控件的视觉基准见 `design/qingkong-controls/control-library.png`。
+该目录保留用户风格板、内置绘图提示词、分层材质和应用图标候选，以及带区域坐标的色彩对照。
+浅色雾银玻璃与墨蓝正文是这一主题的基准；图稿中的时间、天气、电量均为设计示例。
+图稿完成、纹理切分质量与原生渲染验收分别记录，不以参考图替代真实画面。
+
 Rust 库与 UKUI 空间样式数据，不创建 OpenXR、GPU、socket 或常驻进程。
 
 `Widget` 提供 Group、Card、Text、Icon、Button、Slider、SurfaceReference；rect 使用组件平面的逻辑像素，+X 向右、+Y 向下。`Scene` 提供根策略和原子事务的操作列表，交给 `xr-shell-protocols` 客户端发送；协议、版本协商和渲染由 Shell 维护。

@@ -1,0 +1,458 @@
+{
+  "schema": 1,
+  "status": "drawn art reference and unintegrated texture candidates",
+  "theme": "qingkong-light",
+  "generated_with": "built-in image_gen.imagegen",
+  "artifacts": [
+    {
+      "file": "style-reference.png",
+      "bytes": 2044570,
+      "sha256": "1b4a03fedcf1c4702f101df38761a232051f4d7da15e745739032aee9dc5ce11",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB"
+    },
+    {
+      "file": "control-library.png",
+      "bytes": 1634470,
+      "sha256": "d8ef270d05f80028d424a28d189473032fd97fadfc36d236267a8a6075fe2d55",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB"
+    },
+    {
+      "file": "glass-material-atlas.png",
+      "bytes": 1410989,
+      "sha256": "56ff5b73e58618d5800d3d2d35eeb0f91632ea7dafbc16d81f8866b34e37c287",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA"
+    },
+    {
+      "file": "application-icons.png",
+      "bytes": 1581595,
+      "sha256": "29b05c0981ec36622fd14937861005c31c4e12f1528f9f81b5420efa1c9575d0",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA"
+    },
+    {
+      "file": "prompts.txt",
+      "bytes": 8811,
+      "sha256": "72686b0f86df7627ff6ee988040e5cb151a0da1ebba5119828da5b684beff983"
+    },
+    {
+      "file": "colour-audit.json",
+      "bytes": 2494,
+      "sha256": "d38d751b7acd2634de7a608cdc3f3f366d109920b2085829c0368e2eb888ac56"
+    }
+  ],
+  "palette": {
+    "accent": "#3790FA",
+    "mist_silver": "#E8F0F8",
+    "content": "#F5F7FA",
+    "ink": "#233047",
+    "folder": "#FFC735"
+  },
+  "material_atlas": {
+    "file": "glass-material-atlas.png",
+    "grid": [
+      4,
+      4
+    ],
+    "cells": [
+      {
+        "id": "panel-normal",
+        "cell_xyxy": [
+          0,
+          0,
+          314,
+          314
+        ],
+        "uv_xyxy": [
+          0.0,
+          0.0,
+          0.25,
+          0.25
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "panel-hover",
+        "cell_xyxy": [
+          314,
+          0,
+          627,
+          314
+        ],
+        "uv_xyxy": [
+          0.25,
+          0.0,
+          0.5,
+          0.25
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "panel-pressed",
+        "cell_xyxy": [
+          627,
+          0,
+          940,
+          314
+        ],
+        "uv_xyxy": [
+          0.5,
+          0.0,
+          0.75,
+          0.25
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "panel-selected",
+        "cell_xyxy": [
+          940,
+          0,
+          1254,
+          314
+        ],
+        "uv_xyxy": [
+          0.75,
+          0.0,
+          1.0,
+          0.25
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "island-information",
+        "cell_xyxy": [
+          0,
+          314,
+          314,
+          627
+        ],
+        "uv_xyxy": [
+          0.0,
+          0.25,
+          0.25,
+          0.5
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "island-applications",
+        "cell_xyxy": [
+          314,
+          314,
+          627,
+          627
+        ],
+        "uv_xyxy": [
+          0.25,
+          0.25,
+          0.5,
+          0.5
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "island-settings",
+        "cell_xyxy": [
+          627,
+          314,
+          940,
+          627
+        ],
+        "uv_xyxy": [
+          0.5,
+          0.25,
+          0.75,
+          0.5
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "grab-base",
+        "cell_xyxy": [
+          940,
+          314,
+          1254,
+          627
+        ],
+        "uv_xyxy": [
+          0.75,
+          0.25,
+          1.0,
+          0.5
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "window-rim",
+        "cell_xyxy": [
+          0,
+          627,
+          314,
+          940
+        ],
+        "uv_xyxy": [
+          0.0,
+          0.5,
+          0.25,
+          0.75
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "separate-layer"
+      },
+      {
+        "id": "window-shadow",
+        "cell_xyxy": [
+          314,
+          627,
+          627,
+          940
+        ],
+        "uv_xyxy": [
+          0.25,
+          0.5,
+          0.5,
+          0.75
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "separate-layer"
+      },
+      {
+        "id": "window-specular",
+        "cell_xyxy": [
+          627,
+          627,
+          940,
+          940
+        ],
+        "uv_xyxy": [
+          0.5,
+          0.5,
+          0.75,
+          0.75
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "separate-layer"
+      },
+      {
+        "id": "window-bevel",
+        "cell_xyxy": [
+          940,
+          627,
+          1254,
+          940
+        ],
+        "uv_xyxy": [
+          0.75,
+          0.5,
+          1.0,
+          0.75
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "separate-layer"
+      },
+      {
+        "id": "key-normal",
+        "cell_xyxy": [
+          0,
+          940,
+          314,
+          1254
+        ],
+        "uv_xyxy": [
+          0.0,
+          0.75,
+          0.25,
+          1.0
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "key-hover",
+        "cell_xyxy": [
+          314,
+          940,
+          627,
+          1254
+        ],
+        "uv_xyxy": [
+          0.25,
+          0.75,
+          0.5,
+          1.0
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "key-pressed",
+        "cell_xyxy": [
+          627,
+          940,
+          940,
+          1254
+        ],
+        "uv_xyxy": [
+          0.5,
+          0.75,
+          0.75,
+          1.0
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      },
+      {
+        "id": "key-selected",
+        "cell_xyxy": [
+          940,
+          940,
+          1254,
+          1254
+        ],
+        "uv_xyxy": [
+          0.75,
+          0.75,
+          1.0,
+          1.0
+        ],
+        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "kind": "surface"
+      }
+    ],
+    "nine_slice_insets_finalized": false
+  },
+  "icon_atlas": {
+    "file": "application-icons.png",
+    "grid": [
+      3,
+      2
+    ],
+    "cells": [
+      {
+        "id": "files",
+        "cell_xyxy": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "uv_xyxy": [
+          0.0,
+          0.0,
+          0.3333333333333333,
+          0.5
+        ],
+        "usage": "illustrative style asset; preserve the actual application identity when mapping desktop entries"
+      },
+      {
+        "id": "browser",
+        "cell_xyxy": [
+          512,
+          0,
+          1024,
+          512
+        ],
+        "uv_xyxy": [
+          0.3333333333333333,
+          0.0,
+          0.6666666666666666,
+          0.5
+        ],
+        "usage": "illustrative style asset; preserve the actual application identity when mapping desktop entries"
+      },
+      {
+        "id": "document",
+        "cell_xyxy": [
+          1024,
+          0,
+          1536,
+          512
+        ],
+        "uv_xyxy": [
+          0.6666666666666666,
+          0.0,
+          1.0,
+          0.5
+        ],
+        "usage": "illustrative style asset; preserve the actual application identity when mapping desktop entries"
+      },
+      {
+        "id": "media",
+        "cell_xyxy": [
+          0,
+          512,
+          512,
+          1024
+        ],
+        "uv_xyxy": [
+          0.0,
+          0.5,
+          0.3333333333333333,
+          1.0
+        ],
+        "usage": "illustrative style asset; preserve the actual application identity when mapping desktop entries"
+      },
+      {
+        "id": "terminal",
+        "cell_xyxy": [
+          512,
+          512,
+          1024,
+          1024
+        ],
+        "uv_xyxy": [
+          0.3333333333333333,
+          0.5,
+          0.6666666666666666,
+          1.0
+        ],
+        "usage": "illustrative style asset; preserve the actual application identity when mapping desktop entries"
+      },
+      {
+        "id": "settings",
+        "cell_xyxy": [
+          1024,
+          512,
+          1536,
+          1024
+        ],
+        "uv_xyxy": [
+          0.6666666666666666,
+          0.5,
+          1.0,
+          1.0
+        ],
+        "usage": "illustrative style asset; preserve the actual application identity when mapping desktop entries"
+      }
+    ]
+  },
+  "alpha_notes": [
+    "Both atlases contain real alpha. RGB in alpha-zero areas is undefined and must not be previewed as opaque RGB.",
+    "Material atlas contains near-zero alpha quantization (including alpha=1); verify at actual compositing and mipmap stages before using it as production art.",
+    "Cells are provisional UV regions; no assumption of final content bounds, padding or cap insets."
+  ],
+  "runtime_integration": false,
+  "approval_required_by_user": false,
+  "values_on_reference_board_are_examples_not_live_state": true,
+  "preserved_interaction_structure": [
+    "unframed client content with rounded clipping",
+    "external lower grab and companion orb",
+    "independent information/application/status taskbar islands",
+    "independent near-field keyboard"
+  ]
+}
