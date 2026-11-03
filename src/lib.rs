@@ -69,7 +69,7 @@ impl Theme {
             .and_then(|k| self.colours.get(k))
             .copied()
             .or_else(|| self.colours.get(style).copied())
-            .unwrap_or([18.0 / 255.0, 24.0 / 255.0, 38.0 / 255.0, 0.72])
+            .unwrap_or([232.0 / 255.0, 240.0 / 255.0, 248.0 / 255.0, 0.72])
     }
     pub fn radius(&self, role: &str) -> f32 {
         self.corner_radii

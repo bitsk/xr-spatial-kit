@@ -1,0 +1,346 @@
+{
+  "schema": 1,
+  "theme": "qingkong-light",
+  "bounds_convention": "integer XYXY, exclusive right/bottom; insets are source crop [left,top,right,bottom] before runtime gutter",
+  "runtime_padding_px": 2,
+  "alpha_cutoff_inclusive": 8,
+  "materials": {
+    "panel-normal": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        18,
+        63,
+        312,
+        277
+      ],
+      "insets_ltrb": [
+        58,
+        57,
+        58,
+        64
+      ]
+    },
+    "panel-hover": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        325,
+        60,
+        622,
+        278
+      ],
+      "insets_ltrb": [
+        60,
+        60,
+        60,
+        64
+      ]
+    },
+    "panel-pressed": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        633,
+        63,
+        930,
+        277
+      ],
+      "insets_ltrb": [
+        58,
+        57,
+        60,
+        63
+      ]
+    },
+    "panel-selected": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        941,
+        62,
+        1240,
+        278
+      ],
+      "insets_ltrb": [
+        59,
+        58,
+        60,
+        63
+      ]
+    },
+    "island-information": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        13,
+        414,
+        317,
+        525
+      ],
+      "insets_ltrb": [
+        54,
+        52,
+        55,
+        58
+      ]
+    },
+    "island-applications": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        317,
+        413,
+        628,
+        532
+      ],
+      "insets_ltrb": [
+        58,
+        53,
+        56,
+        64
+      ]
+    },
+    "island-settings": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        628,
+        415,
+        936,
+        526
+      ],
+      "insets_ltrb": [
+        53,
+        51,
+        56,
+        59
+      ]
+    },
+    "grab-base": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        974,
+        429,
+        1209,
+        510
+      ],
+      "insets_ltrb": [
+        37,
+        37,
+        39,
+        43
+      ]
+    },
+    "window-rim": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        15,
+        686,
+        311,
+        884
+      ],
+      "insets_ltrb": [
+        55,
+        53,
+        53,
+        54
+      ]
+    },
+    "window-shadow": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        325,
+        684,
+        621,
+        902
+      ],
+      "insets_ltrb": [
+        64,
+        64,
+        64,
+        64
+      ]
+    },
+    "window-specular": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        655,
+        679,
+        920,
+        878
+      ],
+      "insets_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "window-bevel": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        943,
+        686,
+        1239,
+        884
+      ],
+      "insets_ltrb": [
+        54,
+        53,
+        54,
+        54
+      ]
+    },
+    "key-normal": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        36,
+        968,
+        293,
+        1217
+      ],
+      "insets_ltrb": [
+        59,
+        56,
+        59,
+        63
+      ]
+    },
+    "key-hover": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        340,
+        966,
+        606,
+        1224
+      ],
+      "insets_ltrb": [
+        62,
+        58,
+        61,
+        68
+      ]
+    },
+    "key-pressed": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        651,
+        969,
+        910,
+        1218
+      ],
+      "insets_ltrb": [
+        59,
+        56,
+        59,
+        64
+      ]
+    },
+    "key-selected": {
+      "file": "glass-material-atlas.png",
+      "rect_xyxy": [
+        962,
+        968,
+        1221,
+        1219
+      ],
+      "insets_ltrb": [
+        59,
+        56,
+        61,
+        64
+      ]
+    }
+  },
+  "icons": {
+    "ukui-xr-files": {
+      "file": "application-icons.png",
+      "rect_xyxy": [
+        52,
+        56,
+        488,
+        503
+      ],
+      "insets_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "ukui-xr-browser": {
+      "file": "application-icons.png",
+      "rect_xyxy": [
+        551,
+        57,
+        986,
+        504
+      ],
+      "insets_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "ukui-xr-document": {
+      "file": "application-icons.png",
+      "rect_xyxy": [
+        1049,
+        57,
+        1483,
+        504
+      ],
+      "insets_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "ukui-xr-media": {
+      "file": "application-icons.png",
+      "rect_xyxy": [
+        51,
+        532,
+        489,
+        984
+      ],
+      "insets_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "ukui-xr-terminal": {
+      "file": "application-icons.png",
+      "rect_xyxy": [
+        548,
+        532,
+        987,
+        984
+      ],
+      "insets_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "ukui-xr-settings": {
+      "file": "application-icons.png",
+      "rect_xyxy": [
+        1045,
+        531,
+        1486,
+        984
+      ],
+      "insets_ltrb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "notes": [
+    "Each bitmap receives its own transparent two-pixel gutter; zero RGB when alpha<=8, then premultiply BGRA.",
+    "The applications/settings soft shadows touch near x628; split at this low-alpha valley. Their alpha>16 main shapes are preserved; the shared low-alpha tail is truncated.",
+    "The diagonal specular overlay uses zero insets and whole-image scaling. These are measured candidate slicing parameters, not native visual acceptance."
+  ]
+}
