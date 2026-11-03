@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "scope": "Qingkong optical artwork in a native ARM64 simulated OpenXR session; no physical-headset acceptance",
+  "reference_art_commit": "1950f9f",
+  "verified_kit_source_commit": "59fac54c24b6a4dbf782891f2f67043528738fb9",
+  "verified_shell_source_commit": "c320b05cacd3ed6229ef526a89622000932f5e5d",
+  "runtime_assets": {
+    "application-icons.png": "29b05c0981ec36622fd14937861005c31c4e12f1528f9f81b5420efa1c9575d0",
+    "regions.json": "49f5c8230305c963179302f0dfaec95edcc760869e4a824db044f007bed73e3e",
+    "glass-material-atlas.png": "56ff5b73e58618d5800d3d2d35eeb0f91632ea7dafbc16d81f8866b34e37c287"
+  },
+  "loaded_materials": 16,
+  "loaded_icons": 6,
+  "art_fallback_count": 0,
+  "rendering": {
+    "gpu": "Turnip Adreno (TM) 690",
+    "elapsed_seconds": 352.398824406,
+    "frames": 19376,
+    "eye_submissions": [
+      19376,
+      19376
+    ],
+    "eye_size_px": [
+      1920,
+      2160
+    ],
+    "validation_errors": 0,
+    "validation_warnings": 0,
+    "captures": [
+      "qingkong-three-island",
+      "qingkong-hero",
+      "qingkong-keyboard"
+    ],
+    "source_pixel_capture": true
+  },
+  "concept_empty_capsule_median_srgb": [
+    216,
+    231,
+    252
+  ],
+  "observed_empty_capsule_median_srgb": [
+    [
+      219,
+      232,
+      247
+    ],
+    [
+      217,
+      231,
+      247
+    ],
+    [
+      219,
+      232,
+      247
+    ]
+  ],
+  "sample_max_absolute_channel_difference": 5,
+  "colour_method": "Project known empty local glass-face points using captured eye pose/FOV and actual frame geometry, then take a 5x5 display-sRGB median from the lossless left-eye GPU PNG. Scene/material comparison; not display colorimetry or identical concept/render lighting.",
+  "independent_capsules": 3,
+  "adjacent_world_gap_m": 0.0832,
+  "session_resources_destroyed": true,
+  "original_ukui_preserved": true,
+  "raw_records_stored_separately": true,
+  "limits": [
+    "Selected composited pixel samples are not whole-display colorimetry.",
+    "This artwork check does not establish all desktop features or physical headset operation."
+  ]
+}

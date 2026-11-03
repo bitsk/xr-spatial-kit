@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "status": "drawn art reference and unintegrated texture candidates",
+  "status": "drawn reference followed by integrated and natively checked Qingkong artwork",
   "theme": "qingkong-light",
   "generated_with": "built-in image_gen.imagegen",
   "artifacts": [
@@ -75,7 +75,7 @@
           0.25,
           0.25
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -92,7 +92,7 @@
           0.5,
           0.25
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -109,7 +109,7 @@
           0.75,
           0.25
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -126,7 +126,7 @@
           1.0,
           0.25
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -143,7 +143,7 @@
           0.25,
           0.5
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -160,7 +160,7 @@
           0.5,
           0.5
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -177,7 +177,7 @@
           0.75,
           0.5
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -194,7 +194,7 @@
           1.0,
           0.5
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -211,7 +211,7 @@
           0.25,
           0.75
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "separate-layer"
       },
       {
@@ -228,7 +228,7 @@
           0.5,
           0.75
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "separate-layer"
       },
       {
@@ -245,7 +245,7 @@
           0.75,
           0.75
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "separate-layer"
       },
       {
@@ -262,7 +262,7 @@
           1.0,
           0.75
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "separate-layer"
       },
       {
@@ -279,7 +279,7 @@
           0.25,
           1.0
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -296,7 +296,7 @@
           0.5,
           1.0
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -313,7 +313,7 @@
           0.75,
           1.0
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       },
       {
@@ -330,11 +330,12 @@
           1.0,
           1.0
         ],
-        "usage": "reference-only; inspect alpha bounds and establish content/inset bounds before runtime nine-slice",
+        "usage": "Cell locator only. Renderer uses the separately audited crop bounds and source cap insets in art/qingkong/regions.json.",
         "kind": "surface"
       }
     ],
-    "nine_slice_insets_finalized": false
+    "nine_slice_insets_finalized": true,
+    "runtime_region_file": "../../art/qingkong/regions.json"
   },
   "icon_atlas": {
     "file": "application-icons.png",
@@ -446,7 +447,7 @@
     "Material atlas contains near-zero alpha quantization (including alpha=1); verify at actual compositing and mipmap stages before using it as production art.",
     "Cells are provisional UV regions; no assumption of final content bounds, padding or cap insets."
   ],
-  "runtime_integration": false,
+  "runtime_integration": true,
   "approval_required_by_user": false,
   "values_on_reference_board_are_examples_not_live_state": true,
   "preserved_interaction_structure": [
@@ -454,5 +455,6 @@
     "external lower grab and companion orb",
     "independent information/application/status taskbar islands",
     "independent near-field keyboard"
-  ]
+  ],
+  "native_visual_check": "native-visual-check.json"
 }
