@@ -7,20 +7,20 @@
     "sans-serif"
   ],
   "font_size": 20,
-  "corner_radius": 24,
+  "corner_radius": 20,
   "border_width": 1,
   "colours": {
     "glass": [
-      0.08627450980392157,
-      0.10196078431372549,
-      0.13725490196078433,
-      0.78
+      0.07058823529411765,
+      0.09411764705882353,
+      0.14901960784313725,
+      0.72
     ],
     "card": [
       1,
       1,
       1,
-      0.12
+      0.14
     ],
     "key": [
       1,
@@ -75,6 +75,12 @@
       0.39215686274509803,
       0.43137254901960786,
       1
+    ],
+    "key_border": [
+      1,
+      1,
+      1,
+      0.25
     ]
   },
   "styles": {
@@ -96,6 +102,13 @@
     "keyboard.key": "key",
     "slider.primary": "accent",
     "rim.panel": "border",
-    "rim.button": "button_border"
+    "rim.button": "button_border",
+    "rim.keyboard": "key_border"
+  },
+  "corner_radii": {
+    "panel": 20,
+    "button": 12,
+    "key": 12,
+    "dock": 27.2
   }
 }

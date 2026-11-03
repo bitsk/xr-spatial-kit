@@ -6,7 +6,7 @@ Rust 库与 UKUI 空间样式数据，不创建 OpenXR、GPU、socket 或常驻�
 
 ```rust
 use xr_spatial_kit::{Scene, Widget};
-let mut scene = Scene::new([1200.0, 64.0], [1.2, 0.064], [0.0, 0.86, -1.72], "dock_lazy_follow")
+let mut scene = Scene::new([1200.0, 54.4], [1.2, 0.0544], [0.0, 0.86, -1.72], "dock_lazy_follow")
     .with_rotation([12.0, 0.0, 0.0]);
 scene.push(Widget::spatial_group("apps", [960.0, 584.0], [0.96, 0.584], [0.0, 1.25, -1.68]));
 scene.push(Widget::button("files", [24.0, 24.0, 180.0, 64.0], "文件管理器", "launch-files", "button.secondary")
@@ -18,7 +18,7 @@ let operations = scene.operations();
 
 `InteractionState` 将同一 interaction 的 press/drag/release 和 Cancel 归一；按钮在内部释放时激活，滑块捕获后允许移出区域继续调整。取消会清空按下状态。客户端需要将 Shell 事件的 node-local 坐标和 capture/interaction 标识交给它。
 
-空间样式固定为暗玻璃 `(22,26,35,.78)`、普通按钮白12%、键帽白15%、悬停白24%、面板/按钮边缘白22%/18%，焦点为 `#3790FA`。主文字 `#F2F6FC`、次文字 `#94A3B8` alpha .85。宿主 UKUI 明暗主题不会把空间面板变成白底。Dock 背景按64px高胶囊与32px半径渲染，交互浮起由 Shell 几何后端完成。
+空间样式固定为暗玻璃 `(18,24,38,.72)`、普通按钮白14%、键帽白15%、悬停白24%、面板/按钮边缘白22%/18%，焦点为 `#3790FA`。主文字 `#F2F6FC`、次文字 `#94A3B8` alpha .85。宿主 UKUI 明暗主题不会把空间面板变成白底。`Theme::radius(role)` 提供 panel=20、button=12、key=12、dock=27.2 的圆角 tokens；键帽边缘 `rim.keyboard` 为白25%。Dock 背景按54.4px高胶囊与27.2px半径渲染，交互浮起由 Shell 几何后端完成。
 
 `Theme::default()` 使用内建 UKUI tokens；`Theme::load()` 可加载独立安装的样式文件。字体族含中文回退名称，实际字形塑形与绘制由 Shell 的 Pango/Cairo 后端完成；单独安装 token 文件不能证明中文已经呈现。
 

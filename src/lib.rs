@@ -13,6 +13,8 @@ pub struct Theme {
     pub font_families: Vec<String>,
     pub font_size: f32,
     pub corner_radius: f32,
+    #[serde(default)]
+    pub corner_radii: BTreeMap<String, f32>,
     pub border_width: f32,
     pub colours: BTreeMap<String, [f32; 4]>,
     pub styles: BTreeMap<String, String>,
@@ -33,7 +35,11 @@ impl Theme {
             theme.corner_radius.is_finite()
                 && theme.corner_radius >= 0.0
                 && theme.border_width.is_finite()
-                && theme.border_width >= 0.0,
+                && theme.border_width >= 0.0
+                && theme
+                    .corner_radii
+                    .values()
+                    .all(|radius| radius.is_finite() && *radius >= 0.0),
             "invalid spatial geometry tokens"
         );
         ensure!(
@@ -59,7 +65,13 @@ impl Theme {
             .and_then(|k| self.colours.get(k))
             .copied()
             .or_else(|| self.colours.get(style).copied())
-            .unwrap_or([22.0 / 255.0, 26.0 / 255.0, 35.0 / 255.0, 0.78])
+            .unwrap_or([18.0 / 255.0, 24.0 / 255.0, 38.0 / 255.0, 0.72])
+    }
+    pub fn radius(&self, role: &str) -> f32 {
+        self.corner_radii
+            .get(role)
+            .copied()
+            .unwrap_or(self.corner_radius)
     }
 }
 

@@ -1,3 +1,10 @@
+xr-spatial-kit (0.2.1) unstable; urgency=medium
+
+  * Refine cool-blue glass, translucent controls and keyboard rim tokens.
+  * Expose panel, button, key and capsule corner-radius roles.
+
+ -- bits <bigbits@hackx.cc>  Wed, 04 Nov 2026 03:00:32 +0800
+
 xr-spatial-kit (0.2.0) unstable; urgency=medium
 
   * Add independent spatial groups and explicit panel rotation.
