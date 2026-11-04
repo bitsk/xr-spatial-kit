@@ -74,5 +74,10 @@
     "grab_width_fraction": 0.24,
     "content_pixels_preserved": true
   },
-  "unavailable_weather": "neutral cloud and dash; no invented condition or temperature"
+  "unavailable_weather": "neutral cloud and dash; no invented condition or temperature",
+  "font_resolution": {
+    "UI_vectors_and_text": "2x logical, bounded to2048",
+    "application_textures": "native",
+    "layout": "Pango real logical extents; one paragraph; tabular clock/status digits"
+  }
 }
