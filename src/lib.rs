@@ -11,11 +11,21 @@ use std::{collections::BTreeMap, path::Path};
 pub mod taskbar;
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
+pub struct TextStyle {
+    pub size: f32,
+    pub weight: u16,
+    #[serde(default)]
+    pub tabular_numbers: bool,
+}
+
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Theme {
     pub schema: u32,
     pub id: String,
     pub font_families: Vec<String>,
     pub font_size: f32,
+    #[serde(default)]
+    pub typography: BTreeMap<String, TextStyle>,
     pub corner_radius: f32,
     #[serde(default)]
     pub corner_radii: BTreeMap<String, f32>,
@@ -34,6 +44,13 @@ impl Theme {
         ensure!(
             theme.schema == 1 && theme.font_size.is_finite() && theme.font_size > 0.0,
             "unsupported spatial style schema or text size"
+        );
+        ensure!(
+            theme.typography.values().all(|s| s.size.is_finite()
+                && s.size > 0.
+                && s.size <= 96.
+                && (100..=900).contains(&s.weight)),
+            "invalid spatial typography tokens"
         );
         ensure!(
             theme.corner_radius.is_finite()

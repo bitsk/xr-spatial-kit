@@ -3,7 +3,7 @@
   "id": "ukui.spatial.qingkong.light",
   "font_families": [
     "Noto Sans CJK SC",
-    "WenQuanYi Micro Hei",
+    "Noto Sans",
     "sans-serif"
   ],
   "font_size": 20,
@@ -138,16 +138,59 @@
     "dock.active-icon": "app_focus",
     "dock.status-icon": "transparent",
     "taskbar.clock": "foreground",
-    "taskbar.caption": "muted",
+    "taskbar.caption": "foreground",
     "taskbar.status": "foreground",
     "taskbar.separator": "separator",
     "taskbar.running": "running",
-    "taskbar.workspace": "workspace_dot"
+    "taskbar.workspace": "workspace_dot",
+    "taskbar.weather": "foreground"
   },
   "corner_radii": {
     "panel": 20,
     "button": 12,
     "key": 12,
     "dock": 36
+  },
+  "typography": {
+    "body": {
+      "size": 22,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "title": {
+      "size": 28,
+      "weight": 600,
+      "tabular_numbers": false
+    },
+    "button": {
+      "size": 24,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "key": {
+      "size": 26,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "taskbar.clock": {
+      "size": 36,
+      "weight": 600,
+      "tabular_numbers": true
+    },
+    "taskbar.caption": {
+      "size": 19,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "taskbar.status": {
+      "size": 22,
+      "weight": 500,
+      "tabular_numbers": true
+    },
+    "taskbar.weather": {
+      "size": 21,
+      "weight": 500,
+      "tabular_numbers": true
+    }
   }
 }

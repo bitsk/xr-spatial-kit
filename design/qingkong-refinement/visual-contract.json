@@ -1,0 +1,78 @@
+{
+  "reference": "../qingkong-controls/control-library.png",
+  "palette": {
+    "accent": "#3790FA",
+    "mist": "#E8F0F8",
+    "white": "#F5F7FA",
+    "ink": "#233047"
+  },
+  "typography": {
+    "body": {
+      "size": 22,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "title": {
+      "size": 28,
+      "weight": 600,
+      "tabular_numbers": false
+    },
+    "button": {
+      "size": 24,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "key": {
+      "size": 26,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "taskbar.clock": {
+      "size": 36,
+      "weight": 600,
+      "tabular_numbers": true
+    },
+    "taskbar.caption": {
+      "size": 19,
+      "weight": 500,
+      "tabular_numbers": false
+    },
+    "taskbar.status": {
+      "size": 22,
+      "weight": 500,
+      "tabular_numbers": true
+    },
+    "taskbar.weather": {
+      "size": 21,
+      "weight": 500,
+      "tabular_numbers": true
+    }
+  },
+  "three_islands_logical": {
+    "side": [
+      440,
+      72
+    ],
+    "centre": [
+      620,
+      72
+    ],
+    "gap": 72,
+    "application_icon": 48
+  },
+  "art": {
+    "file": "island-skins.png",
+    "sha256": "6a8e2870e3208d62ba23c59da8162c96d0c932dee7acd779543e6b4a29e97253",
+    "generator": "imagegen",
+    "transparent": true,
+    "dynamic_content_baked": false
+  },
+  "window": {
+    "corner_radius": 16,
+    "external_buttons": 32,
+    "grab_height": 24,
+    "grab_width_fraction": 0.24,
+    "content_pixels_preserved": true
+  },
+  "unavailable_weather": "neutral cloud and dash; no invented condition or temperature"
+}

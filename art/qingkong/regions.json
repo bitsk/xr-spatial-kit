@@ -244,6 +244,51 @@
         61,
         64
       ]
+    },
+    "capsule-normal": {
+      "file": "island-skins.png",
+      "rect_xyxy": [
+        102,
+        150,
+        1434,
+        329
+      ],
+      "insets_ltrb": [
+        90,
+        89,
+        90,
+        89
+      ]
+    },
+    "capsule-hover": {
+      "file": "island-skins.png",
+      "rect_xyxy": [
+        102,
+        435,
+        1434,
+        614
+      ],
+      "insets_ltrb": [
+        90,
+        89,
+        90,
+        89
+      ]
+    },
+    "capsule-pressed": {
+      "file": "island-skins.png",
+      "rect_xyxy": [
+        102,
+        719,
+        1434,
+        897
+      ],
+      "insets_ltrb": [
+        90,
+        88,
+        90,
+        88
+      ]
     }
   },
   "icons": {
