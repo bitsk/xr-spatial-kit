@@ -38,3 +38,7 @@ dpkg-buildpackage -us -uc -b
 ```
 
 构建前准备固定 Cargo.lock 的缓存。`librust-xr-spatial-kit-dev` 安装源码与样式输入，`xr-spatial-style-ukui` 安装 `/usr/share/xr/styles/ukui.json`，以及 `/usr/share/xr/art/qingkong/` 下的原始绘图 PNG 和切片区域清单。Shell 按清单裁切并建立独立透明采样边距，文字与动态状态不包含在底图中。包构建、与真实 Shell 的控件行为、目标系统安装分别记录；包安装不会启动桌面。
+
+三岛的设计坐标通过同一个 Shell 跟随锚点变换。独立侧岛需要显式调用
+`with_spatial_policy(taskbar::POLICY)`；`spatial_group` 默认仍为 world-locked。
+使用这项扩展的客户端必须协商 `scene.spatial-policy.v1`，避免旧 Shell 静默忽略策略。

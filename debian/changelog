@@ -1,3 +1,9 @@
+xr-spatial-kit (0.2.4) unstable; urgency=medium
+
+  * Expose an explicit shared spatial policy for taskbar island groups.
+
+ -- bits <bigbits@hackx.cc>  Wed, 04 Nov 2026 21:51:05 +0800
+
 xr-spatial-kit (0.2.3) unstable; urgency=medium
 
   * Add Qingkong typography tokens and wider information/status islands.

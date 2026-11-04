@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-//! Three independent capsules, aligned in STAGE space with open gaps between them.
+//! Three capsules share one Shell-owned lazy-follow anchor and retain open gaps.
+pub const POLICY: &str = "dock_lazy_follow";
 pub const LOGICAL_HEIGHT: f32 = 72.0;
 pub const CENTER_LOGICAL: [f32; 2] = [620.0, LOGICAL_HEIGHT];
 pub const SIDE_LOGICAL: [f32; 2] = [440.0, LOGICAL_HEIGHT];

@@ -124,6 +124,7 @@ pub struct Widget {
     pub max: f32,
     pub surface: Option<(String, String)>,
     pub spatial_panel: bool,
+    pub spatial_policy: String,
     pub logical_size: [f32; 2],
     pub size_m: [f32; 2],
     pub position_m: [f32; 3],
@@ -146,6 +147,7 @@ impl Widget {
             max: 1.0,
             surface: None,
             spatial_panel: false,
+            spatial_policy: "world_locked".into(),
             logical_size: [0.0; 2],
             size_m: [0.0; 2],
             position_m: [0.0; 3],
@@ -174,6 +176,11 @@ impl Widget {
         w.size_m = size_m;
         w.position_m = position_m;
         w
+    }
+    /// Select a Shell-owned shared spatial anchor for this independent panel.
+    pub fn with_spatial_policy(mut self, policy: &str) -> Self {
+        self.spatial_policy = policy.into();
+        self
     }
     pub fn with_rotation(mut self, rotation_degrees: [f32; 3]) -> Self {
         self.rotation_degrees = rotation_degrees;
@@ -251,6 +258,7 @@ impl Widget {
         }
         if self.spatial_panel {
             node["spatial_panel"] = true.into();
+            node["spatial_policy"] = self.spatial_policy.clone().into();
             node["logical_size"] = json!(self.logical_size);
             node["size_m"] = json!(self.size_m);
             node["position_m"] = json!(self.position_m);
