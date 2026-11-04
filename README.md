@@ -24,9 +24,13 @@ let operations = scene.operations();
 
 `InteractionState` 将同一 interaction 的 press/drag/release 和 Cancel 归一；按钮在内部释放时激活，滑块捕获后允许移出区域继续调整。取消会清空按下状态。客户端需要将 Shell 事件的 node-local 坐标和 capture/interaction 标识交给它。
 
-晴空空间样式使用雾银 `#E8F0F8` 半透明玻璃、暖白 `#F5F7FA` 键帽、墨蓝 `#233047` 正文与焦点蓝 `#3790FA`。宿主 GTK 外观切换不覆盖这一空间材质。`Theme::radius(role)` 提供 panel=20、button=12、key=12、dock=36 的圆角 tokens；72px 三岛背景按半高完整胶囊渲染。`taskbar` 模块共享三个岛的独立坐标和物理尺寸，岛间保留52逻辑像素的间隙。交互浮起由 Shell 几何后端完成。
+晴空空间样式使用雾银 `#E8F0F8` 半透明玻璃、暖白 `#F5F7FA` 键帽、墨蓝 `#233047` 正文与焦点蓝 `#3790FA`。宿主 GTK 外观切换不覆盖这一空间材质。`Theme::radius(role)` 提供 panel=20、button=12、key=12、dock=36 的圆角 tokens；72px 三岛背景按半高完整胶囊渲染。`taskbar` 模块共享三个岛的独立坐标和物理尺寸，侧岛440px、中央岛620px，岛间保留72逻辑像素的间隙。交互浮起由 Shell 几何后端完成。
 
 `Theme::default()` 使用内建 UKUI tokens；`Theme::load()` 可加载独立安装的样式文件。字体族含中文回退名称，实际字形塑形与绘制由 Shell 的 Pango/Cairo 后端完成；单独安装 token 文件不能证明中文已经呈现。
+
+字体以 `typography` 语义 tokens 管理：时钟36px/600，日期19px/500，状态22px/500，正文22px/500，标题28px/600，按钮24px/500。优先使用 openKylin 的 Noto Sans CJK SC，随后为 Noto Sans 与系统无衬线回退。时钟和状态数字启用 `tnum`/`lnum`；文本按 Pango 实际度量垂直对齐并保持单行省略，避免依赖字体符号绘制按钮。Shell 的文字与矢量控件使用受2048px上限约束的2倍栅格化，客户端内容保留自身纹理分辨率。
+
+`island-skins.png` 保留绘图生成的空白玻璃胶囊，裁切与九宫格参数见 `regions.json`。单色状态图标和窗口操控图标独立绘制；应用图标继续使用彩色绘图资产。时间、电量来自实际系统，未接入天气服务时显示中性的未知读数，避免把风格板示例当作遥测。
 
 ```sh
 cargo build --release --offline --locked
