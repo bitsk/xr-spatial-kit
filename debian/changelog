@@ -1,3 +1,9 @@
+xr-spatial-kit (0.2.5) unstable; urgency=medium
+
+  * Expose negotiated horizon-angle placement and angular sizing helpers.
+
+ -- bits <bigbits@hackx.cc>  Thu, 05 Nov 2026 20:01:31 +0800
+
 xr-spatial-kit (0.2.4) unstable; urgency=medium
 
   * Expose an explicit shared spatial policy for taskbar island groups.

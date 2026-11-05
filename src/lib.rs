@@ -10,6 +10,14 @@ use std::{collections::BTreeMap, path::Path};
 /// The Dock and System UI consume this contract without owning each other's state.
 pub mod taskbar;
 
+/// Angular design units: one dmm subtends one millimetre at one metre.
+pub fn dmm_to_m(dmm: f32, distance_m: f32) -> f32 {
+    dmm * distance_m / 1000.
+}
+pub fn min_ray_target_m(distance_m: f32) -> f32 {
+    2. * distance_m * (2.2_f32.to_radians() * 0.5).tan()
+}
+
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct TextStyle {
     pub size: f32,
@@ -129,6 +137,10 @@ pub struct Widget {
     pub size_m: [f32; 2],
     pub position_m: [f32; 3],
     pub rotation_degrees: [f32; 3],
+    pub yaw_deg: f32,
+    pub pitch_deg: f32,
+    pub distance_m: Option<f32>,
+    pub user_facing_billboard: bool,
 }
 impl Widget {
     fn new(id: &str, kind: Kind, rect: [f32; 4], style: &str) -> Self {
@@ -152,6 +164,10 @@ impl Widget {
             size_m: [0.0; 2],
             position_m: [0.0; 3],
             rotation_degrees: [0.0; 3],
+            yaw_deg: 0.,
+            pitch_deg: 0.,
+            distance_m: None,
+            user_facing_billboard: false,
         }
     }
     pub fn card(id: &str, rect: [f32; 4], style: &str) -> Self {
@@ -175,6 +191,23 @@ impl Widget {
         w.logical_size = logical_size;
         w.size_m = size_m;
         w.position_m = position_m;
+        w
+    }
+    /// Freeze a user-facing panel at the current binocular horizon when shown.
+    pub fn horizon_panel(
+        id: &str,
+        logical: [f32; 2],
+        size: [f32; 2],
+        yaw_deg: f32,
+        pitch_deg: f32,
+        distance_m: f32,
+    ) -> Self {
+        let mut w = Self::spatial_group(id, logical, size, [0.; 3]);
+        w.spatial_policy = "head_horizon_spawn".into();
+        w.user_facing_billboard = true;
+        w.yaw_deg = yaw_deg;
+        w.pitch_deg = pitch_deg;
+        w.distance_m = Some(distance_m);
         w
     }
     /// Select a Shell-owned shared spatial anchor for this independent panel.
@@ -263,6 +296,12 @@ impl Widget {
             node["size_m"] = json!(self.size_m);
             node["position_m"] = json!(self.position_m);
             node["rotation_degrees"] = json!(self.rotation_degrees);
+            if self.distance_m.is_some() || self.user_facing_billboard {
+                node["yaw_deg"] = json!(self.yaw_deg);
+                node["pitch_deg"] = json!(self.pitch_deg);
+                node["distance_m"] = json!(self.distance_m);
+                node["user_facing_billboard"] = json!(self.user_facing_billboard);
+            }
         }
         node
     }
