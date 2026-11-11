@@ -95,26 +95,44 @@
       0.22
     ],
     "running": [
-      0.21568627450980393,
-      0.5647058823529412,
-      0.9803921568627451,
+      0.26,
+      0.72,
+      1,
       1
     ],
     "separator": [
       0.3411764705882353,
       0.4235294117647059,
       0.5450980392156862,
-      0.34
+      0.18
     ],
     "workspace_dot": [
       0.3411764705882353,
       0.4235294117647059,
       0.5450980392156862,
       0.5
+    ],
+    "dock_glass": [
+      0.88,
+      0.93,
+      0.99,
+      0.55
+    ],
+    "app_tray": [
+      1,
+      1,
+      1,
+      0.14
+    ],
+    "status_tray": [
+      1,
+      1,
+      1,
+      0.08
     ]
   },
   "styles": {
-    "dock.background": "glass",
+    "dock.background": "dock_glass",
     "dock.application": "card",
     "dock.task": "card",
     "dock.active": "accent",
@@ -134,16 +152,17 @@
     "rim.panel": "border",
     "rim.button": "button_border",
     "rim.keyboard": "key_border",
-    "dock.app-icon": "transparent",
+    "dock.app-icon": "app_tray",
     "dock.active-icon": "app_focus",
-    "dock.status-icon": "transparent",
+    "dock.status-icon": "status_tray",
     "taskbar.clock": "foreground",
     "taskbar.caption": "foreground",
     "taskbar.status": "foreground",
     "taskbar.separator": "separator",
     "taskbar.running": "running",
     "taskbar.workspace": "workspace_dot",
-    "taskbar.weather": "foreground"
+    "taskbar.weather": "foreground",
+    "dock.battery-pill": "app_tray"
   },
   "corner_radii": {
     "panel": 20,
