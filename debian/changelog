@@ -1,3 +1,9 @@
+xr-spatial-kit (0.2.6+xr1) unstable; urgency=medium
+
+  * Install the source SDK under its actual Cargo version directory.
+
+ -- bits <bigbits@hackx.cc>  Tue, 17 Nov 2026 10:06:05 +0800
+
 xr-spatial-kit (0.2.6) unstable; urgency=medium
 
   * Define compact 340px side islands on a 1.72m horizontal arc.
