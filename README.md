@@ -24,7 +24,7 @@ let operations = scene.operations();
 
 `InteractionState` 将同一 interaction 的 press/drag/release 和 Cancel 归一；按钮在内部释放时激活，滑块捕获后允许移出区域继续调整。取消会清空按下状态。客户端需要将 Shell 事件的 node-local 坐标和 capture/interaction 标识交给它。
 
-晴空空间样式使用雾银 `#E8F0F8` 半透明玻璃、暖白 `#F5F7FA` 键帽、墨蓝 `#233047` 正文与焦点蓝 `#3790FA`。宿主 GTK 外观切换不覆盖这一空间材质。`Theme::radius(role)` 提供 panel=20、button=12、key=12、dock=36 的圆角 tokens；72px 三岛背景按半高完整胶囊渲染。`taskbar` 模块共享三个岛的独立坐标和物理尺寸，侧岛340px、中央岛620px，中心位于水平半径1.72m的圆弧上，岛间保留24逻辑像素的弧长间隙。交互浮起由 Shell 几何后端完成。Dock 专用玻璃为中性浅色、Alpha 0.68，图标托盘 Alpha 0.14；正文与动态读数继续独立绘制。
+晴空空间样式使用雾银 `#E8F0F8` 半透明玻璃、暖白 `#F5F7FA` 键帽、墨蓝 `#233047` 正文与焦点蓝 `#3790FA`。宿主 GTK 外观切换不覆盖这一空间材质。`Theme::radius(role)` 提供 panel=20、button=12、key=12、dock=36 的圆角 tokens；72px 三岛背景按半高完整胶囊渲染。`taskbar` 模块共享三个岛的独立坐标和物理尺寸，侧岛340px、中央岛620px，中心同高，位于以参考头位为圆心、水平半径 2.2 m 的圆弧上，三个面板中心低于参考眼位 0.62 m，岛间保留24逻辑像素的弧长间隙。交互浮起由 Shell 几何后端完成。Dock 专用玻璃为中性浅色、Alpha 0.68，图标托盘 Alpha 0.14；正文与动态读数继续独立绘制。
 
 `Theme::default()` 使用内建 UKUI tokens；`Theme::load()` 可加载独立安装的样式文件。字体族含中文回退名称，实际字形塑形与绘制由 Shell 的 Pango/Cairo 后端完成；单独安装 token 文件不能证明中文已经呈现。
 
