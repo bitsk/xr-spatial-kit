@@ -1,3 +1,9 @@
+xr-spatial-kit (0.2.6+xr2) unstable; urgency=medium
+
+  * Package the shared shallow taskbar geometry.
+
+ -- bits <bigbits@hackx.cc>  Tue, 24 Nov 2026 17:06:52 +0800
+
 xr-spatial-kit (0.2.6+xr1) unstable; urgency=medium
 
   * Install the source SDK under its actual Cargo version directory.
